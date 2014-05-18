@@ -1,0 +1,47 @@
+
+<div class = "container">
+  <div class="row">  
+    <table>
+      <% @watches.in_groups_of(5) do |row| %>
+      <tr>
+        <% row.each do |watch| %>
+          <td>
+            <div class="span2">
+                <% if !watch.nil? %>
+                  <table>
+                    <div class = "ver_pic">
+                      <tr>
+                        <td>
+                          <div class = "subpic">
+                            <%=image_tag(watch.imglink,  :alt => "watch", :size =>"120*120")%>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="subname">
+                            <small><%= watch.name%></small>
+                          </div>
+                        </td>
+                      </tr>                      
+                      <tr>
+                        <td>
+                          <div class="subprice">
+                            $:<%= watch.price%>
+                          </div>
+                        </td>
+                      </tr>
+                    </div>
+                  </table>
+                <% end %>
+            </div>
+          </td>
+        <% end %>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+  <div class="pagination">
+	 <%= will_paginate @watches %>
+  </div>
+</div>

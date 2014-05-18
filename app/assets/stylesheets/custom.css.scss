@@ -1,0 +1,67 @@
+@import "bootstrap";
+
+.span12 {
+  width: 940px;
+}
+
+.span11 {
+  width: 860px;
+}
+
+.span10 {
+  width: 780px;
+}
+
+.span9 {
+  width: 700px;
+}
+
+.span8 {
+  width: 620px;
+}
+
+.span7 {
+  width: 540px;
+}
+
+.span6 {
+  width: 460px;
+}
+
+.span5 {
+  width: 380px;
+}
+
+.span4 {
+  width: 300px;
+}
+
+.span3 {
+  width: 220px;
+}
+
+.span2 {
+  width: 140px;
+}
+
+.span1 {
+  width: 60px;
+}
+
+
+.ver_pic{width:140px;height:140px;text-align:center;position:relative;display:table-cell;vertical-align:middle;}
+.ver_pic .subpic{*position:absolute;top:50%;left:50%;}
+.ver_pic .subpic img{*position:relative;top:-50%;left:-50%;}
+.ver_pic .subpic img{ 
+  max-width:120px; 
+  min-width:100px;
+  max-heigh:120px;
+  width:expression(this.width > 120 ? "120px" : this.width); 
+  width:expression(this.heigh > 120 ? "120px" : this.heigh); 
+}
+
+.ver_pic .subprice{
+	text-align:center;
+	color: #123;
+}
+
